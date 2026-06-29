@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>promptvault.dev — Fast website fixes for UK small businesses</title>
+<meta name="description" content="Mobile-broken site? Form not working? Slow page? I fix small-business websites fast — usually 24-48h. From £40. London-based, UK-wide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0a0a0a;--fg:#f5f1e8;--muted:#8a8579;--card:rgba(255,255,255,.04);--border:rgba(255,255,255,.08);--accent:#d8a657;--accent-soft:rgba(216,166,87,.12)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg);color:var(--fg);font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+  .nav{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;max-width:1100px;margin:0 auto}
+  .logo{font-weight:800;letter-spacing:-.02em;font-size:18px}
+  .logo span{color:var(--accent)}
+  .nav a.cta{background:var(--accent);color:#0a0a0a;padding:10px 18px;border-radius:8px;font-weight:600;font-size:14px}
+  .nav a.cta:hover{text-decoration:none;opacity:.9}
+  .hero{padding:80px 0 60px;text-align:center}
+  .hero .pill{display:inline-block;padding:6px 14px;background:var(--accent-soft);color:var(--accent);border-radius:99px;font-size:13px;font-weight:500;margin-bottom:20px;border:1px solid rgba(216,166,87,.25)}
+  .hero h1{font-size:clamp(36px,6vw,64px);font-weight:800;letter-spacing:-.03em;line-height:1.05;margin-bottom:20px}
+  .hero h1 span{color:var(--accent)}
+  .hero p.sub{font-size:18px;color:var(--muted);max-width:620px;margin:0 auto 32px}
+  .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn{padding:14px 26px;border-radius:10px;font-weight:600;font-size:15px;border:none;cursor:pointer;display:inline-block;transition:.15s}
+  .btn-primary{background:var(--accent);color:#0a0a0a}
+  .btn-primary:hover{transform:translateY(-1px);text-decoration:none;box-shadow:0 8px 24px rgba(216,166,87,.25)}
+  .btn-ghost{background:transparent;color:var(--fg);border:1px solid var(--border)}
+  .btn-ghost:hover{text-decoration:none;background:var(--card)}
+  .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:60px 0}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px;transition:.2s}
+  .card:hover{border-color:rgba(216,166,87,.4);transform:translateY(-2px)}
+  .card .icon{width:40px;height:40px;background:var(--accent-soft);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--accent);font-size:20px;font-weight:700}
+  .card h3{font-size:18px;font-weight:700;margin-bottom:8px}
+  .card p{color:var(--muted);font-size:14px}
+  .pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:40px 0}
+  .price{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px;position:relative}
+  .price.featured{border-color:var(--accent);background:linear-gradient(180deg,rgba(216,166,87,.08),transparent)}
+  .price.featured::before{content:"Most popular";position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--accent);color:#0a0a0a;font-size:11px;font-weight:700;padding:4px 10px;border-radius:99px;letter-spacing:.05em}
+  .price h3{font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;font-weight:600;margin-bottom:8px}
+  .price .amt{font-size:42px;font-weight:800;letter-spacing:-.02em;margin-bottom:4px}
+  .price .amt small{font-size:16px;color:var(--muted);font-weight:500}
+  .price .desc{color:var(--muted);font-size:14px;margin-bottom:20px;min-height:40px}
+  .price ul{list-style:none;font-size:14px;margin-bottom:24px}
+  .price ul li{padding:6px 0;color:#cfc8b8;display:flex;gap:8px}
+  .price ul li::before{content:"✓";color:var(--accent);font-weight:700}
+  .price .btn{width:100%;text-align:center}
+  .section{padding:60px 0}
+  .section h2{font-size:36px;font-weight:800;letter-spacing:-.02em;margin-bottom:12px;text-align:center}
+  .section .lead{color:var(--muted);text-align:center;font-size:16px;max-width:560px;margin:0 auto 40px}
+  .how{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+  .step{padding:20px;text-align:center}
+  .step .num{width:48px;height:48px;background:var(--accent);color:#0a0a0a;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;margin:0 auto 14px;font-size:18px}
+  .step h4{font-size:16px;font-weight:700;margin-bottom:6px}
+  .step p{color:var(--muted);font-size:14px}
+  .contact{background:linear-gradient(180deg,var(--card),transparent);border:1px solid var(--border);border-radius:20px;padding:48px;text-align:center;margin:40px 0}
+  .contact h2{margin-bottom:12px}
+  .contact .lead{margin-bottom:28px}
+  .contact .email{font-size:20px;font-weight:600;color:var(--accent)}
+  footer{padding:40px 0;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid var(--border);margin-top:40px}
+  @media(max-width:600px){.hero{padding:50px 0 40px}.section{padding:40px 0}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="logo">promptvault<span>.dev</span></div>
+  <a href="#contact" class="cta">Get a quote</a>
+</nav>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="pill">● 1 spot left this week</span>
+    <h1>Your website is leaking customers.<br><span>I'll fix it by Friday.</span></h1>
+    <p class="sub">Mobile broken? Form not working? Page takes 8 seconds to load? I fix UK small-business websites — usually in 24–48 hours, from £40.</p>
+    <div class="cta-row">
+      <a href="#contact" class="btn btn-primary">Get your free audit →</a>
+      <a href="#pricing" class="btn btn-ghost">See pricing</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="grid3">
+      <div class="card"><div class="icon">📱</div><h3>Mobile broken?</h3><p>I'll make it look right on every phone. No more "looks weird on iPhone" complaints from customers.</p></div>
+      <div class="card"><div class="icon">⚡</div><h3>Site slow as anything?</h3><p>Compress, cache, clean up. I'll get your page loading in under 2 seconds — Google and your visitors will both thank you.</p></div>
+      <div class="card"><div class="icon">🔧</div><h3>Form / booking broken?</h3><p>Customers hitting the contact form and nothing happening? That's money walking out the door. I'll fix it today.</p></div>
+      <div class="card"><div class="icon">🎨</div><h3>Looks dated?</h3><p>Subtle refresh — keep your brand, lose the 2014 WordPress theme. Looks modern without a full rebuild.</p></div>
+      <div class="card"><div class="icon">🔍</div><h3>Can't be found on Google?</h3><p>Basic SEO fixes so local customers can actually find you. Titles, descriptions, sitemap, the lot.</p></div>
+      <div class="card"><div class="icon">🆘</div><h3>Something else weird?</h3><p>Weird error, broken plugin, dodgy email? Tell me what's happening and I'll diagnose and quote in 24h.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="pricing" style="background:var(--card);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div class="wrap">
+    <h2>Flat fees. No surprises.</h2>
+    <p class="lead">You know the price before I start. Pay when it's done and you're happy.</p>
+    <div class="pricing">
+      <div class="price">
+        <h3>Quick Fix</h3>
+        <div class="amt">£40<small> fixed</small></div>
+        <p class="desc">One specific bug, sorted today.</p>
+        <ul><li>1 issue, 1 fix</li><li>Delivered in 24h</li><li>Email support after</li></ul>
+        <a href="#contact" class="btn btn-ghost">Pick this</a>
+      </div>
+      <div class="price featured">
+        <h3>Rescue</h3>
+        <div class="amt">£100<small> fixed</small></div>
+        <p class="desc">Full health-check + the worst stuff fixed.</p>
+        <ul><li>Up to 5 issues fixed</li><li>Mobile + speed pass</li><li>Delivered in 48h</li><li>7 days of email support</li></ul>
+        <a href="#contact" class="btn btn-primary">Pick this</a>
+      </div>
+      <div class="price">
+        <h3>Refresh</h3>
+        <div class="amt">£200<small>+ </small></div>
+        <p class="desc">New look, same content, your hands off.</p>
+        <ul><li>Modern redesign</li><li>Mobile-first</li><li>Speed optimised</li><li>Delivered in 5 days</li></ul>
+        <a href="#contact" class="btn btn-ghost">Pick this</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <p class="lead">No meetings. No contracts. No waffle.</p>
+    <div class="how">
+      <div class="step"><div class="num">1</div><h4>You tell me the URL</h4><p>Reply to the email below with your website address and what's wrong. Free written audit within a few hours.</p></div>
+      <div class="step"><div class="num">2</div><h4>I quote a flat fee</h4><p>You see the price and what's included before paying anything. No hourly billing surprises.</p></div>
+      <div class="step"><div class="num">3</div><h4>I fix it</h4><p>You get an update when each fix lands. Usually 24–48h for the Quick Fix and Rescue tiers.</p></div>
+      <div class="step"><div class="num">4</div><h4>You pay if happy</h4><p>Payment link only goes out once you've seen the result. No win, no fee on the first issue.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <h2>Get your free 5-min site audit</h2>
+      <p class="lead">Tell me your URL + what's bothering you. I'll send back a short list of what's wrong and how I'd fix it — no charge, no catch.</p>
+      <a href="mailto:alex.promptvault@gmail.com?subject=Website%20audit%20request&body=Hi%20-%20my%20website%20is%3A%20%5BURL%5D%0A%0AThe%20main%20problem%20is%3A%20%5BWHAT'S%20WRONG%5D" class="email">alex.promptvault@gmail.com</a>
+      <p style="color:var(--muted);font-size:13px;margin-top:12px">or DM @alexfisherpv on X</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    © 2026 promptvault.dev · UK-based · Replies usually within a few hours during business days
+  </div>
+</footer>
+</body>
+</html>
